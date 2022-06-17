@@ -129,7 +129,7 @@ function a:Window(w)
     z.Name = "WindowLine"
     z.Parent = y
     z.BackgroundColor3 = color1
-    local tw = game.TweenService:Create(textButton, TweenInfo.new(changeSpeed, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true), { BackgroundColor3 = color2 })
+    local tw = game.TweenService:Create(Frame, TweenInfo.new(changeSpeed, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true), { BackgroundColor3 = color2 })
     tw:Play()
     z.BorderSizePixel = 0
     z.Position = UDim2.new(0, 0, 0, 34)
