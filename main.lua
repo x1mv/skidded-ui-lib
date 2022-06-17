@@ -128,12 +128,7 @@ function a:Window(w)
     Drag(y)
     z.Name = "WindowLine"
     z.Parent = y
-    function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
-    counter = 0
-    while wait(0.1)do
-    z.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
-    counter = counter + 0.01
-    end
+    z.BackgroundColor3 = math.random, math.random, math.random
     z.BorderSizePixel = 0
     z.Position = UDim2.new(0, 0, 0, 34)
     z.Size = UDim2.new(0, 212, 0, 2)
