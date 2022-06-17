@@ -1,4 +1,4 @@
-local changeSpeed = 1
+
 local a = {windowCount = 0, flags = {}}
 local b = {}
 setmetatable(
@@ -128,9 +128,12 @@ function a:Window(w)
     Drag(y)
     z.Name = "WindowLine"
     z.Parent = y
-    z.BackgroundColor3 = color1
-    local tw = game.TweenService:Create(Frame, TweenInfo.new(changeSpeed, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true), { BackgroundColor3 = color2 })
-    tw:Play()
+    function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+    counter = 0
+    while wait(0.1)do
+    z.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+    counter = counter + 0.01
+    end
     z.BorderSizePixel = 0
     z.Position = UDim2.new(0, 0, 0, 34)
     z.Size = UDim2.new(0, 212, 0, 2)
